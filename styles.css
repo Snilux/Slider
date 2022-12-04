@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider {
+  width: 45%;
+  overflow: hidden;
+}
+.imagen {
+  display: flex;
+  flex-direction: row;
+  animation: slider 8s infinite linear;
+}
+.imagen > img {
+  max-width: 100%;
+}
+
+@keyframes slider {
+  0%,
+  10% {
+    transform: translateX(0);
+  }
+  20%,
+  30% {
+    transform: translateX(-100%);
+  }
+  40%,
+  50% {
+    transform: translateX(-200%);
+  }
+}
+@media screen and (max-width: 600px) {
+  .slider {
+    width: 90%;
+  }
+}
